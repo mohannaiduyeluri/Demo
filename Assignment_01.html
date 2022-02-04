@@ -1,52 +1,182 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<title>Menu</title>
-	<style>
+ <title>Menu</title>
+ <style>
+  * {
+   box-sizing: border-box;
+  }
 
-	</style>
+  body {
+   font-family: Helvetica, Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: rgb(128, 128, 128);
+  }
+
+  nav {
+   background-color: rgb(255, 255, 255);
+
+   display: flex;
+   flex-direction: row;
+  }
+
+  nav>div:hover,
+  nav>div:focus-within {
+   background-color: rgb(255, 0, 0);
+   position: relative;
+  }
+
+  h2,
+  label {
+   display: block;
+   margin: 0;
+   padding: 5px 10px;
+   min-width: 100px;
+   font-size: medium;
+  }
+
+  nav>div>div {
+   display: none;
+   flex-direction: column;
+   position: absolute;
+   background-color: rgb(128, 0, 255);
+   width: 100%;
+  }
+
+  nav>div:hover>div,
+  nav>div:focus-within>div {
+   display: flex;
+  }
+
+  nav input {
+   position: absolute;
+   top: -1000px;
+  }
+
+  nav a {
+   display: block;
+   padding: 5px 10px;
+   text-decoration: none;
+  }
+
+  nav a:hover {
+   background-color: rgb(255, 255, 255);
+  }
+
+  .container {
+   max-width: 1231px;
+   margin: 0 auto;
+  }
+
+  h3 {
+   margin: 0;
+  }
+  
+  h1{
+   padding-top: 3%;
+   font-size: xxx-large;
+   
+  }
+
+  .alert {
+   background-color: rgb(255, 255, 0);
+   border-left: 5px solid rgb(255, 128, 64);
+   padding: 15px;
+   margin: 25px;
+  }
+
+  .yellow {
+   border-color: rgb(245, 245, 80);
+  }
+
+  #menu1 {
+   background-color: rgb(255, 128, 64);
+   width: 33.33%
+  }
+
+  #menu2 {
+   background-color: rgb(255, 255, 255);
+   width: 33.33%
+  }
+
+  #menu3 {
+   background-color: green;
+   width: 33.33%
+  }
+
+  .arrow {
+   border: solid black;
+   border-width: 0 3px 3px 0;
+   display: inline-block;
+   padding: 3px;
+  }
+
+  .down {
+   transform: rotate(45deg);
+   -webkit-transform: rotate(45deg);
+  }
+
+  .name {
+   background-color: white;
+   align-items: center;
+   float: center;
+   width: 40%;
+   height: 100px;
+   text-align: center;
+   margin: 0 auto;
+   text-size-adjust: inherit;
+   font-family: cursive;
+  }
+ </style>
 </head>
 
 <body>
-	<nav>
-		<ol>
-			<li>File</li>
-			<li>New</li>
-			<li>Open</li>
-			<li>Save</li>
-			<li>Print</li>
-			<li>Close</li>
-		</ol>
-	</nav>
-	<nav>
-		<ul>
-			<li>Edit</li>
-			<li>Undo</li>
-			<li>Redo</li>
-			<li>Cut</li>
-			<li>Copy</li>
-			<li>Paste</li>
-			<li>Delete</li>
-			<li>Select All</li>
-		</ul>
-	</nav>
-	<nav>
-		<ul>
-			<li>View</li>
-			<li>Zoom In</li>
-			<li>Zoom Out</li>
-			<li>Actual Size</li>
-			<li>Fit Page</li>
-			<li>Fit Width</li>
-			<li>Fit Height</li>
-			<li>Rotate Left</li>
-			<li>Rotate Right</li>
-			<li>Full Screen</li>
-		</ul>
-
-	</nav>
+ <nav>
+  <div id="menu1">
+   <h2>File   <i class="arrow down"></i></h2>
+   <div>
+    <a href="">New</a>
+    <a href="">Open</a>
+    <a href="">Save</a>
+    <a href="">Print</a>
+    <a href="">Close</a>
+   </div>
+  </div>
+  <div id="menu2">
+   <h2>Edit   <i class="arrow down"></i></h2>
+   <div>
+    <a href="">Undo</a>
+    <a href="">Redo</a>
+    <a href="">Cut</a>
+    <a href="">Copy</a>
+    <a href="">Paste</a>
+    <a href="">Delete</a>
+    <a href="">Select All</a>
+   </div>
+  </div>
+  <div id="menu3">
+   <h2>View   <i class="arrow down"></i></h2>
+   <div>
+    <a href="">Zoom In</a>
+    <a href="">Zoom Out</a>
+    <a href="">Actual Size</a>
+    <a href="">Fit Page</a>
+    <a href="">Fit Width</a>
+    <a href="">Fit Height</a>
+    <a href="">Rotate Left</a>
+    <a href="">Rotate Right</a>
+    <a href="">Full Screen</a>
+   </div>
+  </div>
+ </nav>
+ <div>
+  <div class="name">
+   <h1>Mohan Sandeep Yeluri</h1>
+  </div>
+ </div>
 
 </body>
 
 </html>
+ 
